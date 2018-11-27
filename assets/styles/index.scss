@@ -1,1 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: #f2f1f1;
+}
+
+.titleClass {
+  text-align: center;
+}
+
+#sgOut {
+  text-align: right;
+}
+
+.btn {
+  background-color: #dbffff;
+  color: black;
+}
+
+.create {
+  text-align: left;
+}
+
+.get {
+  text-align: left;
+}

@@ -12,6 +12,145 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <div class="buttModals">
+      <button type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#signInModal">Sign In</button>
+<!-- Creating a sign in modal on my application-->
+      <div class="modal fade" id="signInModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+              <!-- Adding sign in to body of modal-->
+              <form id="sign-in" class="border">
+                <fieldset>
+                  <legend>Sign in!</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="submit" value="Sign in!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="signUppp" data-toggle="modal"
+      data-target="#signUpModal">Sign Up!</button>
+
+      <div class="modal fade" id="signUpModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="signUpModalLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+              <!-- Adding in sign up inside of modal-->
+              <form id="sign-up" class="border">
+                <fieldset>
+                  <legend>Sign up</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <input type="submit" value="Sign up!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" id="sgOut">Sign Out</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#changePasswordModal">Change Password</button>
+      <div class="modal fade" id="changePasswordModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="changePasswordLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+              <!-- Adding in change password inside of modal-->
+              <form id="change-password" class="border">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" placeholder="Old Password">
+                  <input type="password" name="passwords[new]" placeholder="New Password">
+                  <input type="submit" value="Change Password!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="titleClass">
+        <h1>Snow Castle</h1>
+      </div>
+      <div class="create">
+        <h3>Add a Product to Inventory</h3>
+          <form class="addProduct" id="product-create">
+            <div class="form-group">
+              <input required type="text" name="inventory[product]" id="insertProduct" placeholder="Product Name">
+              <input required type="number" name="inventory[amount]" placeholder="Amount in Stock">
+              <input required type="number" name="inventory[price]" placeholder="Price">
+              <input required type="text" name="inventory[size]" placeholder="Size">
+              <input required type="text" name="inventory[color]" placeholder="Color">
+              <input required type="text" name="Brand[name]" placeholder="Brand">
+            </div>
+            <button type="submit" class="btn btn-default invent">Add Product to Inventory!</button>
+          </form>
+      </div>
+      <div class="get"><br>
+        <h3>Search through my Inventory</h3>
+        <form class="searchInventory" id="product-search">
+          <div class="form-group">
+            <input required type="text" name="inventory[product]" id="insertProduct" placeholder="Product Name">
+            <input required type="number" name="inventory[price]" placeholder="Price">
+            <input required type="text" name="inventory[size]" placeholder="Size">
+            <input required type="text" name="inventory[color]" placeholder="Color">
+            <input required type="text" name="Brand[name]" placeholder="Brand">
+          </div>
+          <button type="submit" class="btn btn-default invent">Search for Product in Inventory!</button>
+        </form>
+      </div>
+      <div class="patch"><br>
+        <h3>Edit my Inventory</h3>
+        <form class="editProduct" id="product-update">
+          <div class="form-group">
+            <input required type="text" name="inventory[product]" id="insertProduct" placeholder="Product Name">
+            <input required type="number" name="inventory[amount]" placeholder="Amount in Stock">
+            <input required type="number" name="inventory[price]" placeholder="Price">
+            <input required type="text" name="inventory[size]" placeholder="Size">
+            <input required type="text" name="inventory[color]" placeholder="Color">
+            <input required type="text" name="Brand[name]" placeholder="Brand">
+          </div>
+          <button type="submit" class="btn btn-default invent">Edit Product in Inventory!</button>
+        </form>
+      </div>
+      <div class="getAll"><br>
+        <h3>Check all of Inventory</h3>
+        <button type="submit" class="btn btn-default invent">Get all Products in Inventory!</button>
+      </div>
+
+
     </body>
 </html>
