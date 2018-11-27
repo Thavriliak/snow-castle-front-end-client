@@ -72,6 +72,33 @@ const signOutFailure = error => {
   console.error('signOutFailure ran. Error is :', error)
 }
 
+const onNewProductSuccess = data => {
+  console.log(data)
+}
+
+const onNewProductFailure = error => {
+  // console.log('You had an error when creating a new game')
+  console.log(error)
+}
+
+const onUpdateProductSuccess = data => {
+  console.log(data)
+}
+
+const onUpdateProductFailure = error => {
+  console.log(error)
+}
+
+const onAllProductSuccess = data => {
+  console.log(data)
+}
+
+
+const onAllProductFailure = error => {
+  console.log(error)
+}
+
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -80,5 +107,11 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  onNewProductSuccess,
+  onNewProductFailure,
+  onUpdateProductSuccess,
+  onUpdateProductFailure,
+  onAllProductSuccess,
+  onAllProductFailure
 }

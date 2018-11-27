@@ -35,41 +35,42 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
-const updateProductFromApi = data => {
-  return $.ajax({
-    url: config.apiUrl + `/inventory`,
-    method: 'PATCH',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-  })
+const onNewProduct = event => {
+  api.newProductToApi()
+    .then(ui.onNewProductSuccess)
+    .catch(ui.onNewProductFailure)
 }
 
-const newProductToApi = () => {
-  return $.ajax({
-    url: config.apiUrl + `/inventory`,
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: {}
-  })
+const onEditInventory = event => {
+  // const index = $(event.target).attr('class').replace('cell id', '')
+  // const value = player
+  // const over = didIWin()
+  // const data = {
+  //   game: {
+  //     cell: {
+  //       index,
+  //       value
+  //     },
+  //     over
+  //   }
+  //   // data.game.cell.push(player)
+  // }
+  api.updateProductFromApi(data)
+    .then(ui.onUpdateProductSuccess)
+    .catch(ui.onUpdateProductFailure)
 }
 
-const getInventoryFromApi = function () {
-  // use AJAX to send request
-  return $.ajax({
-    url: config.apiUrl + '/inventory',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
-  })
+const onGetOneProduct = event => {
+  api.getProductFromApi()
+    .then(ui.onGetProductSuccess)
+    .after(ui.onGetProductFailure)
 }
 
-const getProductFromApi = function () {
-
+const onAllProducts = event => {
+  event.preventDefault()
+  api.getAllProductsFromApi()
+    .then(ui.onAllProductSuccess)
+    .catch(ui.onAllProductFailure)
 }
 
 module.exports = {
@@ -77,8 +78,8 @@ module.exports = {
   onSignUp,
   onSignOut,
   onChangePassword,
-  updateProductFromApi,
-  newProductToApi,
-  getInventoryFromApi,
-  getProductFromApi
+  onAllProducts,
+  onEditInventory,
+  onNewProduct,
+  onGetOneProduct
 }
