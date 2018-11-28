@@ -93,11 +93,17 @@ const onAllProductSuccess = data => {
   console.log(data)
 }
 
-
 const onAllProductFailure = error => {
   console.log(error)
 }
 
+const onDeleteProductSuccess = data => {
+  console.log(data)
+}
+
+const onDeleteProductFailure = error => {
+  console.log(error)
+}
 
 module.exports = {
   signUpSuccess,
@@ -113,5 +119,7 @@ module.exports = {
   onUpdateProductSuccess,
   onUpdateProductFailure,
   onAllProductSuccess,
-  onAllProductFailure
+  onAllProductFailure,
+  onDeleteProductSuccess,
+  onDeleteProductFailure
 }

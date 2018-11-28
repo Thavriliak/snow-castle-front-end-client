@@ -36,12 +36,15 @@ const onSignOut = event => {
 }
 
 const onNewProduct = event => {
-  api.newProductToApi()
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.newProductToApi(data)
     .then(ui.onNewProductSuccess)
     .catch(ui.onNewProductFailure)
 }
 
 const onEditInventory = event => {
+  event.preventDefault()
   // const index = $(event.target).attr('class').replace('cell id', '')
   // const value = player
   // const over = didIWin()
@@ -61,16 +64,26 @@ const onEditInventory = event => {
 }
 
 const onGetOneProduct = event => {
-  api.getProductFromApi()
+  event.preventDefault()
+  const data = $('#searchForOne').val()
+  api.getProductFromApi(data)
     .then(ui.onGetProductSuccess)
-    .after(ui.onGetProductFailure)
+    .catch(ui.onGetProductFailure)
 }
 
 const onAllProducts = event => {
   event.preventDefault()
-  api.getAllProductsFromApi()
+  api.getInventoryFromApi()
     .then(ui.onAllProductSuccess)
     .catch(ui.onAllProductFailure)
+}
+
+const onDeleteProduct = event => {
+  event.preventDefault()
+  const data = $('#deleteIt').val()
+  api.deleteProductFromApi(data)
+    .then(ui.onDeleteProductSuccess)
+    .catch(ui.onDeleteProductFailure)
 }
 
 module.exports = {
@@ -81,5 +94,6 @@ module.exports = {
   onAllProducts,
   onEditInventory,
   onNewProduct,
-  onGetOneProduct
+  onGetOneProduct,
+  onDeleteProduct
 }

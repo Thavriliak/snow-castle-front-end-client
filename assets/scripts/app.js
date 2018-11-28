@@ -18,4 +18,5 @@ $(() => {
   $('#searchProducts').on('click', events.onGetOneProduct)
   $('#editProduct').on('click', events.onEditInventory)
   $('#getAllProducts').on('click', events.onAllProducts)
+  $('#deleteProducts').on('click', events.onDeleteProduct)
 })

@@ -40,7 +40,7 @@ const signOut = () => {
 
 const updateProductFromApi = data => {
   return $.ajax({
-    url: config.apiUrl + `/inventory`,
+    url: config.apiUrl + `/inventories`,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -49,21 +49,22 @@ const updateProductFromApi = data => {
   })
 }
 
-const newProductToApi = () => {
+const newProductToApi = (data) => {
+  console.log('data sending to api is', data)
   return $.ajax({
-    url: config.apiUrl + `/inventory`,
+    url: config.apiUrl + `/inventories`,
     method: 'POST',
+    data,
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: {}
+    }
   })
 }
 
 const getInventoryFromApi = function () {
   // use AJAX to send request
   return $.ajax({
-    url: config.apiUrl + '/inventory',
+    url: config.apiUrl + '/inventories',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -71,9 +72,24 @@ const getInventoryFromApi = function () {
   })
 }
 
-const getProductFromApi = function () {
-  // return $.ajax({
-  //   url: config.apiUrl + '/inventory/' + ${inventory.id}
+const getProductFromApi = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const deleteProductFromApi = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
 }
 
 module.exports = {
@@ -84,5 +100,6 @@ module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  deleteProductFromApi
 }
