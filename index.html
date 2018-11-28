@@ -42,9 +42,9 @@
           </div>
         </div>
       </div>
+
       <button type="button" class="btn btn-primary" id="signUppp" data-toggle="modal"
       data-target="#signUpModal">Sign Up!</button>
-
       <div class="modal fade" id="signUpModal">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -73,6 +73,7 @@
         </div>
       </div>
     </div>
+
     <button type="button" class="btn btn-primary" id="sgOut">Sign Out</button>
     <button type="button" class="btn btn-primary" data-toggle="modal"
       data-target="#changePasswordModal">Change Password</button>
@@ -102,9 +103,11 @@
           </div>
         </div>
       </div>
+
       <div class="titleClass">
         <h1>Snow Castle</h1>
-      </div>
+      </div><br>
+
       <div class="create">
         <h3>Add a Product to Inventory</h3>
           <form class="addProduct" id="product-create">
@@ -118,50 +121,55 @@
             </div>
             <button type="submit" class="btn btn-default invent" id="insertProduct" >Add Product to Inventory!</button>
           </form>
-      </div>
-      <div class="get"><br>
+      </div><br>
+
+      <div class="createBrand">
+        <h3>Add a New Brand to Inventory!</h3>
+        <form class="addBrand" id="brand-create">
+          <div class="form-group">
+            <input required type="text" name="brand[name]" placeholder="Brand Name">
+            <input required type="number" name="brand[year_created]" placeholder="Brand established">
+          </div>
+          <button type="submit" class="btn btn-default invent" id="insertBrand" >Add Brand to Inventory!</button>
+      </div><br>
+
+      <div class="get">
         <h3>Search through my Inventory</h3>
         <form class="searchInventory" id="product-search">
           <div class="form-group">
             <input required type="text" name="inventory[id]" placeholder="Product ID" id="searchForOne">
-            <!-- <input required type="text" name="inventory[product]" placeholder="Product Name">
-            <input required type="number" name="inventory[price]" placeholder="Price">
-            <input required type="text" name="inventory[size]" placeholder="Size">
-            <input required type="text" name="inventory[color]" placeholder="Color">
-            <input required type="text" name="Brand[name]" placeholder="Brand"> -->
           </div>
           <button type="submit" class="btn btn-default invent" id="searchProducts">Search for Product in Inventory!</button>
         </form>
-      </div>
-      <div class="patch"><br>
+      </div><br>
+
+      <div class="patch">
         <h3>Edit my Inventory</h3>
         <form class="editProduct" id="product-update">
           <div class="form-group">
+            <input required type="text" name="inventory[id]" placeholder="Product Id">
             <input required type="text" name="inventory[product]" placeholder="Product Name">
             <input required type="number" name="inventory[amount]" placeholder="Amount in Stock">
             <input required type="number" name="inventory[price]" placeholder="Price">
             <input required type="text" name="inventory[size]" placeholder="Size">
             <input required type="text" name="inventory[color]" placeholder="Color">
-            <input required type="text" name="Brand[name]" placeholder="Brand">
+            <input required type="text" name="inventory[brand_id]" placeholder="Brand">
           </div>
           <button type="submit" class="btn btn-default invent" id="editProduct">Edit Product in Inventory!</button>
         </form>
-      </div>
-      <div class="delete"><br>
+      </div><br>
+
+      <div class="delete">
         <h3>Delete Product from Inventory</h3>
         <form class="deleteInventory" id="product-delete">
           <div class="form-group">
             <input required type="text" name="inventory[id]" placeholder="Product ID" id="deleteIt">
-            <!-- <input required type="text" name="inventory[product]" placeholder="Product Name">
-            <input required type="number" name="inventory[price]" placeholder="Price">
-            <input required type="text" name="inventory[size]" placeholder="Size">
-            <input required type="text" name="inventory[color]" placeholder="Color">
-            <input required type="text" name="Brand[name]" placeholder="Brand"> -->
           </div>
           <button type="submit" class="btn btn-default invent" id="deleteProducts">Delete Product from Inventory!</button>
         </form>
-      </div>
-      <div class="getAll"><br>
+      </div><br>
+
+      <div class="getAll">
         <h3>Check all of Inventory</h3>
         <button type="submit" class="btn btn-default invent" id="getAllProducts">Get all Products in Inventory!</button>
         <div class="content"></div>

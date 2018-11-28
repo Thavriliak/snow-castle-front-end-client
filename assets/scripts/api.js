@@ -39,13 +39,14 @@ const signOut = () => {
 }
 
 const updateProductFromApi = data => {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + `/inventories`,
+    url: config.apiUrl + `/inventories/` + data.inventory.id,
     method: 'PATCH',
+    data,
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 
@@ -92,6 +93,18 @@ const deleteProductFromApi = function (id) {
   })
 }
 
+const newBrandToApi = (data) => {
+  console.log('data sending to api is', data)
+  return $.ajax({
+    url: config.apiUrl + `/brands`,
+    method: 'POST',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   updateProductFromApi,
   newProductToApi,
@@ -101,5 +114,6 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  deleteProductFromApi
+  deleteProductFromApi,
+  newBrandToApi
 }

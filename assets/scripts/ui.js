@@ -105,6 +105,15 @@ const onDeleteProductFailure = error => {
   console.log(error)
 }
 
+const onNewBrandSuccess = data => {
+  console.log(data)
+}
+
+const onNewBrandFailure = error => {
+  // console.log('You had an error when creating a new game')
+  console.log(error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -121,5 +130,7 @@ module.exports = {
   onAllProductSuccess,
   onAllProductFailure,
   onDeleteProductSuccess,
-  onDeleteProductFailure
+  onDeleteProductFailure,
+  onNewBrandSuccess,
+  onNewBrandFailure
 }

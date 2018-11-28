@@ -38,6 +38,7 @@ const onSignOut = event => {
 const onNewProduct = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log("I'm in onNewProduct and my current data is, " + JSON.stringify(data))
   api.newProductToApi(data)
     .then(ui.onNewProductSuccess)
     .catch(ui.onNewProductFailure)
@@ -58,6 +59,7 @@ const onEditInventory = event => {
   //   }
   //   // data.game.cell.push(player)
   // }
+  const data = getFormFields(event.target)
   api.updateProductFromApi(data)
     .then(ui.onUpdateProductSuccess)
     .catch(ui.onUpdateProductFailure)
@@ -86,6 +88,15 @@ const onDeleteProduct = event => {
     .catch(ui.onDeleteProductFailure)
 }
 
+const onCreateBrand = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log("I'm in onNewProduct and my current data is, " + JSON.stringify(data))
+  api.newBrandToApi(data)
+    .then(ui.onNewBrandSuccess)
+    .catch(ui.onNewBrandFailure)
+}
+
 module.exports = {
   onSignIn,
   onSignUp,
@@ -95,5 +106,6 @@ module.exports = {
   onEditInventory,
   onNewProduct,
   onGetOneProduct,
-  onDeleteProduct
+  onDeleteProduct,
+  onCreateBrand
 }
