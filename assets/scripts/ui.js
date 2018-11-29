@@ -27,6 +27,7 @@ const signInSuccess = data => {
   $('#cgPss').show()
   $('#sgOut').show()
   $('.dadBod').show()
+  $('.titleClass').hide()
 }
 
 const signInFailure = error => {
