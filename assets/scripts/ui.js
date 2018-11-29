@@ -62,6 +62,7 @@ const signOutSuccess = data => {
   $('#sgOut').hide()
   $('#cgPss').hide()
   $('.dadBod').hide()
+  $('.titleClass').show()
 }
 
 const signOutFailure = error => {
