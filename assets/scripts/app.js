@@ -21,5 +21,5 @@ $(() => {
   $('#deleteProducts').on('click', events.onDeleteProduct)
   $('.addBrand').on('submit', events.onCreateBrand)
   $('.getBrands').on('click', events.onAllBrands)
-  $('#deleteBrand').on('click', events.onDeleteBrand)
+  $('#brand-delete').on('submit', events.onDeleteBrand)
 })

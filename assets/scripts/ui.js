@@ -24,9 +24,10 @@ const signInSuccess = data => {
   console.log('signInSuccess ran. Data is :', data)
   $('.buttModals').hide()
   $('#signInModal').modal('toggle')
-  $('#afterSignIn').show()
-  $('.newGame').show()
-  $('.pastGames').show()
+  $('#cgPss').show()
+  $('#sgOut').show()
+  $('.dadBod').show()
+  $('.titleClass').hide()
 }
 
 const signInFailure = error => {
@@ -58,11 +59,9 @@ const signOutSuccess = data => {
   $('#message').addClass('success')
   console.log('signOutSuccess ran. Data is :', data)
   $('.buttModals').show()
-  $('#afterSignIn').hide()
-  $('.container').hide()
-  $('.newGame').hide()
-  $('.playAgain').hide()
-  $('.pastGames').hide()
+  $('#sgOut').hide()
+  $('#cgPss').hide()
+  $('.dadBod').hide()
 }
 
 const signOutFailure = error => {
@@ -89,8 +88,22 @@ const onUpdateProductFailure = error => {
   console.log(error)
 }
 
-const onAllProductSuccess = data => {
-  console.log(data)
+const onAllProductSuccess = response => {
+  console.log(response)
+  $('.content').html('')
+  response.inventories.forEach(inventories => {
+    const productHTML = (`
+      <h4>Product: ${inventories.product}</h4>
+      <p>Product Id: ${inventories.id}</p>
+      <p>Amount: ${inventories.amount}</p>
+      <p>Price: ${inventories.price}</p>
+      <p>Size: ${inventories.size}</p>
+      <p>Color: ${inventories.color}</p>
+      <p>Brand Id: ${inventories.brand.id}</p>
+      <br>
+      `)
+    $('.content').append(productHTML)
+  })
 }
 
 const onAllProductFailure = error => {
@@ -116,6 +129,16 @@ const onNewBrandFailure = error => {
 
 const onAllBrandsSuccess = data => {
   console.log(data)
+  $('.content').html('')
+  data.brands.forEach(brands => {
+    const brandHTML = (`
+      <h4>Brand Name: ${brands.name}</h4>
+      <p>Brand Id: ${brands.id}</p>
+      <p>Year Established: ${brands.year_created}</p>
+      <br>
+      `)
+    $('.brandContent').append(brandHTML)
+  })
 }
 
 const onAllBrandsFailure = error => {
@@ -129,7 +152,6 @@ const onDeleteBrandSuccess = data => {
 const onDeleteBrandFailure = error => {
   console.log(error)
 }
-
 
 module.exports = {
   signUpSuccess,

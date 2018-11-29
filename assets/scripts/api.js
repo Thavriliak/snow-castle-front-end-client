@@ -118,14 +118,13 @@ const getBrandsFromApi = function () {
 
 const deleteBrandFromApi = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/inventories/' + id,
+    url: config.apiUrl + '/brands/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
-
 
 module.exports = {
   updateProductFromApi,

@@ -46,19 +46,6 @@ const onNewProduct = event => {
 
 const onEditInventory = event => {
   event.preventDefault()
-  // const index = $(event.target).attr('class').replace('cell id', '')
-  // const value = player
-  // const over = didIWin()
-  // const data = {
-  //   game: {
-  //     cell: {
-  //       index,
-  //       value
-  //     },
-  //     over
-  //   }
-  //   // data.game.cell.push(player)
-  // }
   const data = getFormFields(event.target)
   api.updateProductFromApi(data)
     .then(ui.onUpdateProductSuccess)
@@ -106,7 +93,7 @@ const onAllBrands = event => {
 
 const onDeleteBrand = event => {
   event.preventDefault()
-  const data = $('#deleteBrand').val()
+  const data = $('#deletee').val()
   api.deleteBrandFromApi(data)
     .then(ui.onDeleteBrandSuccess)
     .catch(ui.onDeleteBrandFailure)
