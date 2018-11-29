@@ -19,5 +19,7 @@ $(() => {
   $('.editProduct').on('submit', events.onEditInventory)
   $('#getAllProducts').on('click', events.onAllProducts)
   $('#deleteProducts').on('click', events.onDeleteProduct)
-  $('.createBrand').on('submit', events.onCreateBrand)
+  $('.addBrand').on('submit', events.onCreateBrand)
+  $('.getBrands').on('click', events.onAllBrands)
+  $('#deleteBrand').on('click', events.onDeleteBrand)
 })

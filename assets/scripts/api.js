@@ -105,6 +105,28 @@ const newBrandToApi = (data) => {
   })
 }
 
+const getBrandsFromApi = function () {
+  // use AJAX to send request
+  return $.ajax({
+    url: config.apiUrl + '/brands',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const deleteBrandFromApi = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+
 module.exports = {
   updateProductFromApi,
   newProductToApi,
@@ -115,5 +137,7 @@ module.exports = {
   changePassword,
   signOut,
   deleteProductFromApi,
-  newBrandToApi
+  newBrandToApi,
+  getBrandsFromApi,
+  deleteBrandFromApi
 }

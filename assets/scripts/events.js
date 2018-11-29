@@ -97,6 +97,21 @@ const onCreateBrand = event => {
     .catch(ui.onNewBrandFailure)
 }
 
+const onAllBrands = event => {
+  event.preventDefault()
+  api.getBrandsFromApi()
+    .then(ui.onAllBrandsSuccess)
+    .catch(ui.onAllBrandsFailure)
+}
+
+const onDeleteBrand = event => {
+  event.preventDefault()
+  const data = $('#deleteBrand').val()
+  api.deleteBrandFromApi(data)
+    .then(ui.onDeleteBrandSuccess)
+    .catch(ui.onDeleteBrandFailure)
+}
+
 module.exports = {
   onSignIn,
   onSignUp,
@@ -107,5 +122,7 @@ module.exports = {
   onNewProduct,
   onGetOneProduct,
   onDeleteProduct,
-  onCreateBrand
+  onCreateBrand,
+  onAllBrands,
+  onDeleteBrand
 }

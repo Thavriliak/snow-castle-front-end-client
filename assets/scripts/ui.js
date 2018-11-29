@@ -114,6 +114,23 @@ const onNewBrandFailure = error => {
   console.log(error)
 }
 
+const onAllBrandsSuccess = data => {
+  console.log(data)
+}
+
+const onAllBrandsFailure = error => {
+  console.log(error)
+}
+
+const onDeleteBrandSuccess = data => {
+  console.log(data)
+}
+
+const onDeleteBrandFailure = error => {
+  console.log(error)
+}
+
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -132,5 +149,9 @@ module.exports = {
   onDeleteProductSuccess,
   onDeleteProductFailure,
   onNewBrandSuccess,
-  onNewBrandFailure
+  onNewBrandFailure,
+  onAllBrandsSuccess,
+  onAllBrandsFailure,
+  onDeleteBrandSuccess,
+  onDeleteBrandFailure
 }

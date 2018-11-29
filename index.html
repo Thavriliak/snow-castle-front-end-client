@@ -123,16 +123,6 @@
           </form>
       </div><br>
 
-      <div class="createBrand">
-        <h3>Add a New Brand to Inventory!</h3>
-        <form class="addBrand" id="brand-create">
-          <div class="form-group">
-            <input required type="text" name="brand[name]" placeholder="Brand Name">
-            <input required type="number" name="brand[year_created]" placeholder="Brand established">
-          </div>
-          <button type="submit" class="btn btn-default invent" id="insertBrand" >Add Brand to Inventory!</button>
-      </div><br>
-
       <div class="get">
         <h3>Search through my Inventory</h3>
         <form class="searchInventory" id="product-search">
@@ -172,6 +162,34 @@
       <div class="getAll">
         <h3>Check all of Inventory</h3>
         <button type="submit" class="btn btn-default invent" id="getAllProducts">Get all Products in Inventory!</button>
+        <div class="content"></div>
+      </div><br>
+
+      <div class="createBrand">
+        <h3>Add a New Brand to Inventory!</h3>
+        <form class="addBrand" id="brand-create">
+          <div class="form-group">
+            <input required type="text" name="brand[name]" placeholder="Brand Name">
+            <input required type="number" name="brand[year_created]" placeholder="Brand established">
+          </div>
+          <button type="submit" class="btn btn-default invent" id="insertBrand" >Add Brand to Inventory!</button>
+        </form>
+      </div><br>
+
+      <div class="delete">
+        <h3>Delete Brand from Inventory</h3>
+        <form class="deleteBrandPlz" id="brand-delete">
+          <div class="form-group">
+            <input required type="text" name="brand[id]" placeholder="Product ID" id="deletee">
+          </div>
+          <button type="submit" class="btn btn-default invent" id="deleteBrand">Delete Brand from Inventory!</button>
+        </form>
+      </div><br>
+
+
+      <div class="getBrands">
+        <h3>Check all Brands</h3>
+        <button type="submit" class="btn btn-default invent" id="getAllBrands">Get all Brands in Inventory!</button>
         <div class="content"></div>
       </div>
 
