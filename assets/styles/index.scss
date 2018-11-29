@@ -10,11 +10,45 @@ body {
 
 #sgOut {
   text-align: right;
+  display: none;
+}
+
+#cgPss {
+  display: none;
+}
+
+.dadBod {
+  display: none;
+}
+
+h1 {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 100px;
+}
+
+h3 {
+  font-family: 'Mountains of Christmas', cursive;
+  font-size: 40px;
 }
 
 .btn {
   background-color: #dbffff;
   color: black;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.modal-title {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.border {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .btn:hover {

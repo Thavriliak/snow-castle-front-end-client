@@ -106,7 +106,7 @@ const onAllBrands = event => {
 
 const onDeleteBrand = event => {
   event.preventDefault()
-  const data = $('#deleteBrand').val()
+  const data = $('#deletee').val()
   api.deleteBrandFromApi(data)
     .then(ui.onDeleteBrandSuccess)
     .catch(ui.onDeleteBrandFailure)
