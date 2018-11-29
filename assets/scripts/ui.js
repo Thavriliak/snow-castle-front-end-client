@@ -99,7 +99,7 @@ const onAllProductSuccess = response => {
       <p>Price: ${inventories.price}</p>
       <p>Size: ${inventories.size}</p>
       <p>Color: ${inventories.color}</p>
-      Brand Id: ${inventories.brand_id}</p>
+      <p>Brand Id: ${inventories.brand.id}</p>
       <br>
       `)
     $('.content').append(productHTML)
