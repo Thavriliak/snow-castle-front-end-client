@@ -34,7 +34,7 @@ const onSignOut = event => {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-
+// put in products
 const onNewProduct = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
