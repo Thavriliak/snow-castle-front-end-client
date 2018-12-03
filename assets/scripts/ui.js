@@ -81,6 +81,25 @@ const onNewProductFailure = error => {
   console.log(error)
 }
 
+const onGetProductSuccess = data => {
+  console.log(data)
+  const oneProduct = (`
+      <h4>Product: ${data.inventory.product}</h4>
+      <p>Product Id: ${data.inventory.id}</p>
+      <p>Amount: ${data.inventory.amount}</p>
+      <p>Price: ${data.inventory.price}</p>
+      <p>Size: ${data.inventory.size}</p>
+      <p>Color: ${data.inventory.color}</p>
+      <p>Brand Id: ${data.inventory.brand.id}</p>
+      <br>
+      `)
+  $('.getContent').html(oneProduct)
+}
+
+const onGetProductFailure = error => {
+  console.log(error)
+}
+
 const onUpdateProductSuccess = data => {
   console.log(data)
 }
@@ -130,7 +149,7 @@ const onNewBrandFailure = error => {
 
 const onAllBrandsSuccess = data => {
   console.log(data)
-  $('.content').html('')
+  $('.brandContent').html('')
   data.brands.forEach(brands => {
     const brandHTML = (`
       <h4>Brand Name: ${brands.name}</h4>
@@ -176,5 +195,7 @@ module.exports = {
   onAllBrandsSuccess,
   onAllBrandsFailure,
   onDeleteBrandSuccess,
-  onDeleteBrandFailure
+  onDeleteBrandFailure,
+  onGetProductSuccess,
+  onGetProductFailure
 }

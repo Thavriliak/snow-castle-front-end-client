@@ -74,6 +74,7 @@ const getInventoryFromApi = function () {
 }
 
 const getProductFromApi = function (id) {
+  console.log('this is my id' + id)
   return $.ajax({
     url: config.apiUrl + '/inventories/' + id,
     method: 'GET',
