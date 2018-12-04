@@ -5,7 +5,6 @@ const signUpSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signUpSuccess ran. Data is :', data)
-  $('#signUppp').hide()
   $('#signUpModal').modal('toggle')
 }
 
@@ -28,6 +27,7 @@ const signInSuccess = data => {
   $('#sgOut').show()
   $('.dadBod').show()
   $('.titleClass').hide()
+  $('#signUppp').hide()
 }
 
 const signInFailure = error => {
@@ -63,6 +63,8 @@ const signOutSuccess = data => {
   $('#cgPss').hide()
   $('.dadBod').hide()
   $('.titleClass').show()
+  $('#signUppp').show()
+  $('')
 }
 
 const signOutFailure = error => {
@@ -94,6 +96,7 @@ const onGetProductSuccess = data => {
       <br>
       `)
   $('.getContent').html(oneProduct)
+  $('#product-search')[0].reset()
 }
 
 const onGetProductFailure = error => {
@@ -132,10 +135,13 @@ const onAllProductFailure = error => {
 
 const onDeleteProductSuccess = data => {
   console.log(data)
+  // makes form field disappear and go back to regular view.
+  $('#product-delete')[0].reset()
 }
 
 const onDeleteProductFailure = error => {
   console.log(error)
+  $('#product-delete')[0].reset()
 }
 
 const onNewBrandSuccess = data => {
