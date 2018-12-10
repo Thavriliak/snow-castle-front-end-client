@@ -1,7 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  // background: url:"../../../public/Castle.png"
   background-color: #c8c8c8;
+}
+
+.alert {
+  font-family: 'Permanent Marker', cursive;
 }
 
 .title {
@@ -71,6 +76,11 @@ h3 {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
   font-size: 20px;
+}
+
+.getContent {
+  font-weight: bold;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .content {

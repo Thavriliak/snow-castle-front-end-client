@@ -55,6 +55,7 @@ const onEditInventory = event => {
 const onGetOneProduct = event => {
   event.preventDefault()
   const data = $('#searchForOne').val()
+  console.log('in on get one and data is', data)
   api.getProductFromApi(data)
     .then(ui.onGetProductSuccess)
     .catch(ui.onGetProductFailure)
@@ -93,7 +94,8 @@ const onAllBrands = event => {
 
 const onDeleteBrand = event => {
   event.preventDefault()
-  const data = $('#deletee').val()
+  // const data = $('#deletee').val()
+  const data = getFormFields(event.target)
   api.deleteBrandFromApi(data)
     .then(ui.onDeleteBrandSuccess)
     .catch(ui.onDeleteBrandFailure)
