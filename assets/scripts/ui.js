@@ -90,6 +90,7 @@ const onNewProductSuccess = data => {
   $('.addOneP').html('')
   console.log(data)
   $('.addOneP').html('You\'ve successfully added a new product!')
+  $('#product-create')[0].reset()
 }
 
 const onNewProductFailure = error => {
@@ -97,6 +98,7 @@ const onNewProductFailure = error => {
   $('.addOneP').html('')
   $('.addOneP').html('You had an error when creating a new product!')
   console.log(error)
+  $('#product-create')[0].reset()
 }
 
 const onGetProductSuccess = data => {
@@ -121,6 +123,7 @@ const onGetProductFailure = error => {
   console.log('this is my error! ' + error)
   $('.getOneP').html('')
   $('.getOneP').html('You\'ve run into an error in getting product!')
+  $('#product-search')[0].reset()
 }
 
 const onUpdateProductSuccess = data => {
@@ -128,6 +131,7 @@ const onUpdateProductSuccess = data => {
   console.log('this is my data! ' + data)
   $('.editOneP').html('')
   $('.editOneP').html('You\'ve successfully updated a product!')
+  $('#product-update')[0].reset()
 }
 
 const onUpdateProductFailure = error => {
@@ -135,6 +139,7 @@ const onUpdateProductFailure = error => {
   console.log('this is my data! ' + error)
   $('.editOneP').html('')
   $('.editOneP').html('You\'ve run into an error updating inventory!')
+  $('#product-update')[0].reset()
 }
 
 const onAllProductSuccess = response => {
@@ -171,6 +176,7 @@ const onDeleteProductSuccess = data => {
   $('#product-delete')[0].reset()
   $('.deleteOneP').html('')
   $('.deleteOneP').html('You\'ve successfully deleted a product!')
+  $('#product-delete')[0].reset()
 }
 
 const onDeleteProductFailure = error => {
@@ -179,6 +185,7 @@ const onDeleteProductFailure = error => {
   $('#product-delete')[0].reset()
   $('.deleteOneP').html('')
   $('.deleteOneP').html('You\'ve run into an error deleting a product!')
+  $('#product-delete')[0].reset()
 }
 
 const onNewBrandSuccess = data => {
@@ -186,6 +193,7 @@ const onNewBrandSuccess = data => {
   console.log('this is my data! ' + data)
   $('.newBrand').html('')
   $('.newBrand').html('You\'ve successfully created a new brand!')
+  $('#brand-create')[0].reset()
 }
 
 const onNewBrandFailure = error => {
@@ -194,6 +202,7 @@ const onNewBrandFailure = error => {
   console.log('this is my error! ' + error)
   $('.newBrand').html('')
   $('.newBrand').html('You\'ve run into an error creating a brand!')
+  $('#brand-create')[0].reset()
 }
 
 const onAllBrandsSuccess = data => {
@@ -224,6 +233,7 @@ const onDeleteBrandSuccess = data => {
   console.log(data)
   $('.deleteBrand').html('')
   $('.deleteBrand').html('You\'ve successfully deleted a brand!')
+  $('#brand-delete')[0].reset()
 }
 
 const onDeleteBrandFailure = error => {
@@ -231,6 +241,7 @@ const onDeleteBrandFailure = error => {
   console.log(error)
   $('.deleteBrand').html('')
   $('.deleteBrand').html('You\'ve run into an error deleting a brand!')
+  $('#brand-delete')[0].reset()
 }
 
 module.exports = {
