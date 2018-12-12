@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background: url('../../public/Sick_Snowboarding.jpg') 30% 30% no-repeat;
+  background: url('../../public/Sick_Snowboarding.jpg') 20% 20% no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,13 +26,13 @@ body {
 
 .title {
   text-align: center;
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: 'Permanent Marker', cursive;
   color: white;
-  text-shadow:
-    -1px -1px 0 #2b879e,
-    1px -1px 0 #2b879e,
-    -1px 1px 0 #2b879e,
-    1px 1px 0 #2b879e;
+  // text-shadow:
+  //   -1px -1px 0 #2b879e,
+  //   1px -1px 0 #2b879e,
+  //   -1px 1px 0 #2b879e,
+  //   1px 1px 0 #2b879e;
 }
 
 .titleClass {
@@ -43,7 +43,7 @@ body {
   margin-left: -50px;
   width: 100px;
   height: 100px;
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: 'Permanent Marker', cursive;
   color: white;
   text-shadow:
     -1px -1px 0 #000,
@@ -123,7 +123,7 @@ h3 {
 }
 
 .form-group {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Permanent Marker', cursive;
   font-weight: bold;
   font-size: 20px;
 }
@@ -144,28 +144,53 @@ h3 {
 }
 
 .btn {
-  background-color: #dbffff;
-  color: black;
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  font-size: 20px;
+  background-color: white;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  // font-weight: bold;
+  font-size: 15px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.modal-header {
+  background-color: #777;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.modal-footer {
+  background-color: #777;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .modal-title {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Permanent Marker', cursive;
   font-weight: bold;
   font-size: 20px;
 }
 
 .border {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Permanent Marker', cursive;
   font-weight: bold;
   font-size: 20px;
 }
 
 .btn:hover {
-  background: white;
-  color: black;
+  background: black;
+  color: white;
 }
 
 .break {
