@@ -13,6 +13,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <nav>
       <div class="buttModals">
       <button type="button" class="btn btn-primary" data-toggle="modal"
       data-target="#signInModal">Sign In</button>
@@ -105,16 +106,30 @@
         </div>
       </div>
       <div class="authRequests alert"></div>
-      <div class="titleClass">
+    </nav>
+      <header class="title">
         <h1>Snow Castle</h1>
-      </div>
+      </header>
     <div class="dadBod">
-      <div class="title">
-        <h1>Snow Castle</h1>
+      <section class="fullBody">
+      <nav class="flexNav">
+        <button class="link">Add a product to your inventory</button>
+        <button class="link">Look for a product in your inventory</button>
+        <button class="link">Delete a product from your inventory</button>
+        <button class="link">Edit a product in your inventory</button>
+        <button class="link">Look at all your inventory</button>
+        <button class="link">Add a brand to your store</button>
+        <button class="link">Delete a brand in your store</button>
+        <button class="link">Look at all of your carried brands</button>
+      </nav>
+      <article>
+      <div class="opening bullet">
+        <p> Snow Castle is a user friendly application for local snowboard and ski shops
+          to properly and efficiently store their inventory. Whether you own a chain of
+          different stores, or you own one local independent shop, everyone can benefit
+          from the ease of the inventory integration of Snow Castle!
       </div>
-      <hr style="border: 2px solid black;" /><br>
-      <h2 class="distinguish">Products</h2>
-      <div class="create">
+      <div class="create bullet">
         <h3>Add a Product to Inventory</h3><div class='addOneP alert'></div>
           <form class="addProduct" id="product-create">
             <div class="form-group">
@@ -129,7 +144,7 @@
           </form>
       </div><br>
 
-      <div class="get">
+      <div class="get bullet">
         <h3>Search through my Inventory</h3><div class='getOneP alert'></div>
         <form class="searchInventory" id="product-search">
           <div class="form-group">
@@ -140,7 +155,7 @@
         <div class="getContent"></div>
       </div><br>
 
-      <div class="patch">
+      <div class="patch bullet">
         <h3>Edit my Inventory</h3><div class='editOneP alert'></div>
         <form class="editProduct" id="product-update">
           <div class="form-group">
@@ -156,7 +171,7 @@
         </form>
       </div><br>
 
-      <div class="delete">
+      <div class="delete bullet">
         <h3>Delete Product from Inventory</h3><div class='deleteOneP alert'></div>
         <form class="deleteInventory" id="product-delete">
           <div class="form-group">
@@ -166,15 +181,13 @@
         </form>
       </div><br>
 
-      <div class="getAll">
+      <div class="getAll bullet">
         <h3>Check all of Inventory</h3><div class='getAllP alert'></div>
         <button type="submit" class="btn btn-default invent" id="getAllProducts">Get all Products in Inventory!</button>
         <div class="content"></div>
       </div>
-      <hr style="border: 2px solid black;" /><br>
-      <h2 class="distinguish">Brands</h2>
 
-      <div class="createBrand">
+      <div class="createBrand bullet">
         <h3>Add a New Brand to Inventory!</h3><div class='newBrand alert'></div>
         <form class="addBrand" id="brand-create">
           <div class="form-group">
@@ -185,7 +198,7 @@
         </form>
       </div><br>
 
-      <div class="delete">
+      <div class="delete bullet">
         <h3>Delete Brand from Inventory</h3><div class='deleteBrand alert'></div>
         <form class="deleteBrandPlz" id="brand-delete">
           <div class="form-group">
@@ -196,13 +209,16 @@
       </div><br>
 
 
-      <div class="getBrands"><div class='allBrands alert'></div>
+      <div class="getBrands bullet"><div class='allBrands alert'></div>
         <h3>Check all Brands</h3>
         <button type="submit" class="btn btn-default invent" id="getAllBrands">Get all Brands in Inventory!</button>
         <div class="brandContent"></div>
       </div>
-    </div>
-
-
-    </body>
+    </article>
+    </section>
+    <div class="break"></div>
+    <footer>
+      Copyright 2018 Tyler Inc.
+    </footer>
+  </body>
 </html>

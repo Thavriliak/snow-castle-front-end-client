@@ -30,9 +30,9 @@ const signInSuccess = data => {
   $('#cgPss').show()
   $('#sgOut').show()
   $('.dadBod').show()
-  $('.titleClass').hide()
   $('#signUppp').hide()
   $('.authRequests').html('You\'ve successfully signed in!')
+  $('.opening').show()
 }
 
 const signInFailure = error => {
@@ -74,7 +74,6 @@ const signOutSuccess = data => {
   $('.dadBod').hide()
   $('.titleClass').show()
   $('#signUppp').show()
-  $('')
 }
 
 const signOutFailure = error => {
