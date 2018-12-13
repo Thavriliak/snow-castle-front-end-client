@@ -8,9 +8,16 @@ body {
   background-size: cover;
 }
 
+.opening {
+  display: inline-block;
+  text-align: center;
+}
+
 .bullet {
+  text-align: center;
   display: none;
-  text-align: left;
+  overflow: auto;
+  height: 350px;
 }
 
 .alert {
@@ -27,7 +34,7 @@ body {
 .title {
   text-align: center;
   font-family: 'Permanent Marker', cursive;
-  color: white;
+  color: #dcf3ff;
   // text-shadow:
   //   -1px -1px 0 #2b879e,
   //   1px -1px 0 #2b879e,
@@ -119,7 +126,7 @@ h3 {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-  color: white;
+  color: #dcf3ff;
 }
 
 .form-group {
@@ -189,7 +196,7 @@ h3 {
 }
 
 .btn:hover {
-  background: black;
+  background: #dcf3ff;
   color: white;
 }
 

@@ -15,7 +15,7 @@
     <body>
       <nav>
       <div class="buttModals">
-      <button type="button" class="btn btn-primary" data-toggle="modal"
+      <button type="button" class="btn btn-light" data-toggle="modal"
       data-target="#signInModal">Sign In</button>
 <!-- Creating a sign in modal on my application-->
       <div class="modal fade" id="signInModal">
@@ -39,13 +39,13 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
 
-      <button type="button" class="btn btn-primary" id="signUppp" data-toggle="modal"
+      <button type="button" class="btn btn-light" id="signUppp" data-toggle="modal"
       data-target="#signUpModal">Sign Up!</button>
       <div class="modal fade" id="signUpModal">
         <div class="modal-dialog">
@@ -69,15 +69,15 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <button type="button" class="btn btn-primary" id="sgOut">Sign Out</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal"
+    <button type="button" class="btn btn-light" id="sgOut">Sign Out</button>
+    <button type="button" class="btn btn-light" data-toggle="modal"
       data-target="#changePasswordModal" id="cgPss">Change Password</button>
       <div class="modal fade" id="changePasswordModal">
         <div class="modal-dialog">
@@ -100,7 +100,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -113,14 +113,15 @@
     <div class="dadBod">
       <section class="fullBody">
       <nav class="flexNav">
-        <button class="link">Add a product to your inventory</button>
-        <button class="link">Look for a product in your inventory</button>
-        <button class="link">Delete a product from your inventory</button>
-        <button class="link">Edit a product in your inventory</button>
-        <button class="link">Look at all your inventory</button>
-        <button class="link">Add a brand to your store</button>
-        <button class="link">Delete a brand in your store</button>
-        <button class="link">Look at all of your carried brands</button>
+        <button class="open link">Home</button>
+        <button class="adpr link">Add a product to your inventory</button>
+        <button class="lkpr link">Look for a product in your inventory</button>
+        <button class="dlpr link">Delete a product from your inventory</button>
+        <button class="edpr link">Edit a product in your inventory</button>
+        <button class="alpr link">Look at all your inventory</button>
+        <button class="adbr link">Add a brand to your store</button>
+        <button class="dlbr link">Delete a brand in your store</button>
+        <button class="albr link">Look at all of your carried brands</button>
       </nav>
       <article>
       <div class="opening bullet">
@@ -140,9 +141,9 @@
               <input required type="text" name="inventory[color]" placeholder="Color">
               <input required type="text" name="inventory[brand_id]" placeholder="Brand ID">
             </div>
-            <button type="submit" class="btn btn-default invent" id="insertProduct" >Add Product to Inventory!</button>
+            <button type="submit" class="btn btn-light invent" id="insertProduct" >Add Product to Inventory!</button>
           </form>
-      </div><br>
+      </div>
 
       <div class="get bullet">
         <h3>Search through my Inventory</h3><div class='getOneP alert'></div>
@@ -150,10 +151,10 @@
           <div class="form-group">
             <input required type="text" name="inventory[id]" placeholder="Product ID" id="searchForOne">
           </div>
-          <button type="submit" class="btn btn-default invent" id="searchProducts">Search for Product in Inventory!</button>
+          <button type="submit" class="btn btn-light invent" id="searchProducts">Search for Product in Inventory!</button>
         </form>
         <div class="getContent"></div>
-      </div><br>
+      </div>
 
       <div class="patch bullet">
         <h3>Edit my Inventory</h3><div class='editOneP alert'></div>
@@ -167,9 +168,9 @@
             <input required type="text" name="inventory[color]" placeholder="Color">
             <input required type="text" name="inventory[brand_id]" placeholder="Brand">
           </div>
-          <button type="submit" class="btn btn-default invent" id="editProduct">Edit Product in Inventory!</button>
+          <button type="submit" class="btn btn-light invent" id="editProduct">Edit Product in Inventory!</button>
         </form>
-      </div><br>
+      </div>
 
       <div class="delete bullet">
         <h3>Delete Product from Inventory</h3><div class='deleteOneP alert'></div>
@@ -177,13 +178,13 @@
           <div class="form-group">
             <input required type="text" name="inventory[id]" placeholder="Product ID" id="deleteIt">
           </div>
-          <button type="submit" class="btn btn-default invent" id="deleteProducts">Delete Product from Inventory!</button>
+          <button type="submit" class="btn btn-light invent" id="deleteProducts">Delete Product from Inventory!</button>
         </form>
-      </div><br>
+      </div>
 
       <div class="getAll bullet">
         <h3>Check all of Inventory</h3><div class='getAllP alert'></div>
-        <button type="submit" class="btn btn-default invent" id="getAllProducts">Get all Products in Inventory!</button>
+        <button type="submit" class="btn btn-light invent" id="getAllProducts">Get all Products in Inventory!</button>
         <div class="content"></div>
       </div>
 
@@ -194,29 +195,30 @@
             <input required type="text" name="brand[name]" placeholder="Brand Name">
             <input required type="number" name="brand[year_created]" placeholder="Brand established">
           </div>
-          <button type="submit" class="btn btn-default invent" id="insertBrand" >Add Brand to Inventory!</button>
+          <button type="submit" class="btn btn-light invent" id="insertBrand" >Add Brand to Inventory!</button>
         </form>
-      </div><br>
+      </div>
 
-      <div class="delete bullet">
+      <div class="deleteBrand bullet">
         <h3>Delete Brand from Inventory</h3><div class='deleteBrand alert'></div>
         <form class="deleteBrandPlz" id="brand-delete">
           <div class="form-group">
             <input required type="text" name="brand[id]" placeholder="Brand ID" id="deletee">
           </div>
-          <button type="submit" class="btn btn-default invent" id="deleteBrand">Delete Brand from Inventory!</button>
+          <button type="submit" class="btn btn-light invent" id="deleteBrand">Delete Brand from Inventory!</button>
         </form>
-      </div><br>
+      </div>
 
 
       <div class="getBrands bullet"><div class='allBrands alert'></div>
         <h3>Check all Brands</h3>
-        <button type="submit" class="btn btn-default invent" id="getAllBrands">Get all Brands in Inventory!</button>
+        <button type="submit" class="btn btn-light invent" id="getAllBrands">Get all Brands in Inventory!</button>
         <div class="brandContent"></div>
       </div>
     </article>
     </section>
     <div class="break"></div>
+  </div>
     <footer>
       Copyright 2018 Tyler Inc.
     </footer>

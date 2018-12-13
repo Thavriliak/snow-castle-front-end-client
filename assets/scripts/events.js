@@ -101,6 +101,11 @@ const onDeleteBrand = event => {
     .catch(ui.onDeleteBrandFailure)
 }
 
+const onClickAdd = event => {
+  event.preventDefault()
+    .then(ui.onClickAddSuccess)
+}
+
 module.exports = {
   onSignIn,
   onSignUp,
@@ -113,5 +118,6 @@ module.exports = {
   onDeleteProduct,
   onCreateBrand,
   onAllBrands,
-  onDeleteBrand
+  onDeleteBrand,
+  onClickAdd
 }
