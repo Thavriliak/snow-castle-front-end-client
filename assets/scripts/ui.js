@@ -30,9 +30,9 @@ const signInSuccess = data => {
   $('#cgPss').show()
   $('#sgOut').show()
   $('.dadBod').show()
-  $('.titleClass').hide()
   $('#signUppp').hide()
   $('.authRequests').html('You\'ve successfully signed in!')
+  $('.opening').show()
 }
 
 const signInFailure = error => {
@@ -74,7 +74,7 @@ const signOutSuccess = data => {
   $('.dadBod').hide()
   $('.titleClass').show()
   $('#signUppp').show()
-  $('')
+  $('.bullet').hide()
 }
 
 const signOutFailure = error => {
@@ -244,6 +244,11 @@ const onDeleteBrandFailure = error => {
   $('#brand-delete')[0].reset()
 }
 
+const onClickAddSuccess = () => {
+  $('.opening').hide()
+  $('.create').show()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -268,5 +273,6 @@ module.exports = {
   onDeleteBrandSuccess,
   onDeleteBrandFailure,
   onGetProductSuccess,
-  onGetProductFailure
+  onGetProductFailure,
+  onClickAddSuccess
 }
