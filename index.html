@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Snow Castle</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Mountains+of+Christmas|Permanent+Marker" rel="stylesheet">
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <nav>
+      <div class="buttModals">
+      <button type="button" class="btn btn-light" data-toggle="modal"
+      data-target="#signInModal">Sign In</button>
+<!-- Creating a sign in modal on my application-->
+      <div class="modal fade" id="signInModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+              <!-- Adding sign in to body of modal-->
+              <form id="sign-in" class="border">
+                <fieldset>
+                  <legend>Sign in!</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="submit" value="Sign in!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-light" id="signUppp" data-toggle="modal"
+      data-target="#signUpModal">Sign Up!</button>
+      <div class="modal fade" id="signUpModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="signUpModalLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+              <!-- Adding in sign up inside of modal-->
+              <form id="sign-up" class="border">
+                <fieldset>
+                  <legend>Sign up</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <input type="submit" value="Sign up!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-light" id="sgOut">Sign Out</button>
+    <button type="button" class="btn btn-light" data-toggle="modal"
+      data-target="#changePasswordModal" id="cgPss">Change Password</button>
+      <div class="modal fade" id="changePasswordModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+              <h5 class="modal-title" id="changePasswordLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+              <!-- Adding in change password inside of modal-->
+              <form id="change-password" class="border">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" placeholder="Old Password">
+                  <input type="password" name="passwords[new]" placeholder="New Password">
+                  <input type="submit" value="Change Password!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="authRequests alert"></div>
+    </nav>
+      <header class="title">
+        <h1>Snow Castle</h1>
+      </header>
+    <div class="dadBod">
+      <section class="fullBody">
+      <nav class="flexNav">
+        <button class="open link">Home</button>
+        <button class="adpr link">Add a product to your inventory</button>
+        <button class="lkpr link">Look for a product in your inventory</button>
+        <button class="dlpr link">Delete a product from your inventory</button>
+        <button class="edpr link">Edit a product in your inventory</button>
+        <button class="alpr link">Look at all your inventory</button>
+        <button class="adbr link">Add a brand to your store</button>
+        <button class="dlbr link">Delete a brand in your store</button>
+        <button class="albr link">Look at all of your carried brands</button>
+      </nav>
+      <article>
+      <div class="opening bullet">
+        <p> Snow Castle is a user friendly application for local snowboard and ski shops
+          to properly and efficiently store their inventory. Whether you own a chain of
+          different stores, or you own one local independent shop, everyone can benefit
+          from the ease of the inventory integration of Snow Castle!</p>
+      </div>
+      <div class="create bullet">
+        <h3>Add a Product to Inventory</h3><div class='addOneP alert'></div>
+          <form class="addProduct" id="product-create">
+            <div class="form-group">
+              <input required type="text" name="inventory[product]" placeholder="Product Name">
+              <input required type="number" name="inventory[amount]" placeholder="Amount in Stock">
+              <input required type="number" name="inventory[price]" placeholder="Price">
+              <input required type="text" name="inventory[size]" placeholder="Size">
+              <input required type="text" name="inventory[color]" placeholder="Color">
+              <input required type="text" name="inventory[brand_id]" placeholder="Brand ID">
+            </div>
+            <button type="submit" class="btn btn-light invent" id="insertProduct" >Add Product to Inventory!</button>
+          </form>
+      </div>
+
+      <div class="get bullet">
+        <h3>Search through my Inventory</h3><div class='getOneP alert'></div>
+        <form class="searchInventory" id="product-search">
+          <div class="form-group">
+            <input required type="text" name="inventory[id]" placeholder="Product ID" id="searchForOne">
+          </div>
+          <button type="submit" class="btn btn-light invent" id="searchProducts">Search for Product in Inventory!</button>
+        </form>
+        <div class="getContent"></div>
+      </div>
+
+      <div class="patch bullet">
+        <h3>Edit my Inventory</h3><div class='editOneP alert'></div>
+        <form class="editProduct" id="product-update">
+          <div class="form-group">
+            <input required type="text" name="inventory[id]" placeholder="Product Id">
+            <input required type="text" name="inventory[product]" placeholder="Product Name">
+            <input required type="number" name="inventory[amount]" placeholder="Amount in Stock">
+            <input required type="number" name="inventory[price]" placeholder="Price">
+            <input required type="text" name="inventory[size]" placeholder="Size">
+            <input required type="text" name="inventory[color]" placeholder="Color">
+            <input required type="text" name="inventory[brand_id]" placeholder="Brand">
+          </div>
+          <button type="submit" class="btn btn-light invent" id="editProduct">Edit Product in Inventory!</button>
+        </form>
+      </div>
+
+      <div class="delete bullet">
+        <h3>Delete Product from Inventory</h3><div class='deleteOneP alert'></div>
+        <form class="deleteInventory" id="product-delete">
+          <div class="form-group">
+            <input required type="text" name="inventory[id]" placeholder="Product ID" id="deleteIt">
+          </div>
+          <button type="submit" class="btn btn-light invent" id="deleteProducts">Delete Product from Inventory!</button>
+        </form>
+      </div>
+
+      <div class="getAll bullet">
+        <h3>Check all of Inventory</h3><div class='getAllP alert'></div>
+        <button type="submit" class="btn btn-light invent" id="getAllProducts">Get all Products in Inventory!</button>
+        <div class="content"></div>
+      </div>
+
+      <div class="createBrand bullet">
+        <h3>Add a New Brand to Inventory!</h3><div class='newBrand alert'></div>
+        <form class="addBrand" id="brand-create">
+          <div class="form-group">
+            <input required type="text" name="brand[name]" placeholder="Brand Name">
+            <input required type="number" name="brand[year_created]" placeholder="Brand established">
+          </div>
+          <button type="submit" class="btn btn-light invent" id="insertBrand" >Add Brand to Inventory!</button>
+        </form>
+      </div>
+
+      <div class="deleteBrand bullet">
+        <h3>Delete Brand from Inventory</h3><div class='deleteBrand alert'></div>
+        <form class="deleteBrandPlz" id="brand-delete">
+          <div class="form-group">
+            <input required type="text" name="brand[id]" placeholder="Brand ID" id="deletee">
+          </div>
+          <button type="submit" class="btn btn-light invent" id="deleteBrand">Delete Brand from Inventory!</button>
+        </form>
+      </div>
+
+
+      <div class="getBrands bullet"><div class='allBrands alert'></div>
+        <h3>Check all Brands</h3>
+        <button type="submit" class="btn btn-light invent" id="getAllBrands">Get all Brands in Inventory!</button>
+        <div class="brandContent"></div>
+      </div>
+    </article>
+    </section>
+    <div class="break"></div>
+  </div>
+    <footer>
+      <div class="cpr">Copyright 2018</div><div class="fullName">Tyler Havriliak</div>
+    </footer>
+  </body>
+</html>
